@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 40px 0px;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.form-item__input {
+    padding: 10px;
+    border: 0px;
+    outline: none;
+    background-color: #f8f9fa;
+    border: 1px solid #e2e2ee;
+}
+
+.btn {
+    padding: 10px 12px;
+    background: #da5767;
+    border: 2px solid #da5767;
+    cursor: pointer;
+    color: #fff;
+}
+
+.form-error {
+    color: #da5767;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert--open{
+    display: flex;
+}
+
+.alert-content {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert-result--load {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #da5767;
+    border-radius: 50%;
+    border-bottom: 0px;
+    border-left: 0px;
+    animation: load-animation 0.2s infinite;
+}
+
+.alert-result--error{
+    width: 50px;
+    height: 50px;
+    background: url('https://w7.pngwing.com/pngs/415/81/png-transparent-check-mark-error-s-text-photography-area.png') center no-repeat;
+    background-size: contain;
+}
+
+.alert-result--success{
+    width: 50px;
+    height: 50px;
+    background: url('https://clipart-library.com/images_k/success-transparent/success-transparent-5.jpg') center no-repeat;
+    background-size: contain;
+}
+
+@keyframes load-animation {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
